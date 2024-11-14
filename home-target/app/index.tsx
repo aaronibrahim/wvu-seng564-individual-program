@@ -3,7 +3,6 @@ import {  Button,
           Pressable,
           ScrollView, 
 } from 'react-native';
-
 import {  AppBar, 
           Avatar,
           Box,
@@ -12,8 +11,7 @@ import {  AppBar,
           Text,
 } from '@react-native-material/core';
 import { useNavigation } from '@react-navigation/native';
-
-
+import { Link } from 'expo-router';
 import { useSafeArea } from 'react-native-safe-area-context';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -182,24 +180,22 @@ export default function HomeScreen() {
             paddingBottom: 100
           }}
           >
-            <Pressable
-              style={{
-                padding: 15,
-                backgroundColor: 'green',
-                borderRadius: 10
-              }}
-              onPress={() => {
-                navigation.navigate('Sort', {name: 'Sort'})
-              }}
-            >
-              <Text
+            <Link href="/sort" asChild>
+              <Pressable
                 style={{
-                  color: 'white',
-                  textAlign: 'center'
+                  padding: 15,
+                  backgroundColor: 'green',
+                  borderRadius: 10
                 }}
-              >Let's Get Started!</Text>
-            </Pressable>
-
+              >
+                <Text
+                  style={{
+                    color: 'white',
+                    textAlign: 'center'
+                  }}
+                >Let's Get Started!</Text>
+              </Pressable>
+            </Link>
           </Box>
         </Box>
         {/* BGN: Button */}

@@ -13,8 +13,7 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.seaysteady.hometarget"
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
@@ -32,12 +31,6 @@
     ],
     "experiments": {
       "typedRoutes": true
-    },
-    "extra": {
-      "eas": {
-        "projectId": "e47164f8-f1af-421c-8b80-2f3eac2ae2fd"
-      }
-    },
-    "owner": "seaysteady"
+    }
   }
 }
